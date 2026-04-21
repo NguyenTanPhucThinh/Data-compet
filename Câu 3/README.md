@@ -77,7 +77,7 @@ https://www.kaggle.com/competitions/datathon-2026-round-1
 
 ### Khả năng giải thích
 
-Trong report cần có một mục riêng giải thích:
+Trong report cần có một mục riêng *** SỬ DỤNG LATEX *** để giải thích:
 
 - Những yếu tố dẫn động doanh thu chính do mô hình xác định  
 - Có thể dùng:
@@ -95,4 +95,6 @@ Mô hình càng tốt khi:
 
 - **MAE** càng thấp càng tốt  
 - **RMSE** càng thấp càng tốt  
-- **R²** càng cao càng tốt (lý tưởng gần **1**)  
+- **R²** càng cao càng tốt (lý tưởng gần **1**)
+
+***LƯU Ý: CẦN CHỨA MÃ NGUỒN, NOTEBOOK VÀ SUBMISSION***
