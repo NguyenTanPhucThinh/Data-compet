@@ -9,7 +9,7 @@ Giải pháp dự báo Revenue và COGS hàng ngày cho giai đoạn 2023 - 2024
     - `04_Part3_Feature_Eng.ipynb`: Tạo các biến trễ (Lags), cửa sổ trượt (Rolling) và tích hợp Web Traffic.
     - `05_Part3_Modeling_SHAP.ipynb`: Huấn luyện mô hình Ensemble, dự báo đệ quy và giải thích bằng SHAP.
 - `report/`: Chứa mã nguồn LaTeX và file báo cáo PDF theo định dạng NeurIPS.
-- `submission/`: File `final_submission_ensemble.csv` nộp trên Kaggle.
+- `submission/`: File `submission.csv` nộp trên Kaggle.
 
 ## 2. Phương pháp tiếp cận
 - **Mô hình:** Kết hợp **LightGBM** (tối ưu đặc trưng hành vi) và **Prophet** (tối ưu tính mùa vụ).
