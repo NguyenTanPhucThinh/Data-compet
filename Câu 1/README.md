@@ -1,20 +1,6 @@
-# YÊU CẦU BỔ SUNG
+### **Tóm tắt Kết quả Dự án: The Gridbreaker - Team Vô Hạ Hạn]**
 
-## 1. Jupyter Notebook cho từng câu hỏi
-
-- Mỗi câu hỏi cần có **một file Jupyter Notebook riêng** tương ứng.  
-- Notebook phải minh họa đầy đủ quá trình tìm ra đáp án.  
-- Trình bày rõ ràng từng bước xử lý, phân tích và suy luận.  
-
-## 2. Giải thích chi tiết
-
-- Cần giải thích kỹ lưỡng trong từng notebook để hạn chế sai sót.  
-- Làm rõ lý do chọn phương pháp, cách tính toán và cách đưa ra kết luận.  
-- Các bước phải đủ rõ để người khác có thể kiểm tra và tái lập kết quả.  
-
-## 3. File tổng hợp đáp án
-
-Sau khi hoàn thành các notebook:
-
-- Tạo **1 file `.txt`** để tổng hợp đáp án cuối cùng cho tất cả câu hỏi.  
-- File cần trình bày ngắn gọn, rõ ràng và đúng thứ tự câu hỏi.  
+#### **1. Kết quả Phần 1: Câu hỏi Trắc nghiệm (MCQs)**
+*   **Nội dung:** Đã hoàn thành tính toán 10/10 câu hỏi dựa trên 15 tệp dữ liệu gốc.
+*   **Đáp án tổng hợp:** (Ví dụ: Q1-A, Q2-B, Q3-D,...) được lưu chi tiết trong file `TOngHopDapAn` và đối soát qua 10 file Jupyter Notebook riêng biệt.
+*   **Độ tin cậy:** Các kết quả được đảm bảo tính tái lập (reproducibility) thông qua mã nguồn trên GitHub.
