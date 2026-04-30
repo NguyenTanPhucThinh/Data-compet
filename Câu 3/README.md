@@ -1,100 +1,25 @@
-# YÊU CẦU MÔ HÌNH DỰ BÁO REVENUE
+# Datathon 2026 - Giải pháp Dự báo Doanh thu (Team: [Tên Nhóm])
 
-## Công cụ
+Giải pháp dự báo Revenue và COGS hàng ngày cho giai đoạn 2023 - 2024 sử dụng mô hình kết hợp (Ensemble) giữa Machine Learning và Statistical Modeling.
 
-Xây dựng một **pipeline hoàn chỉnh** sử dụng hệ sinh thái Python, có thể dùng:
+## 1. Cấu trúc thư mục
+- `data/`: Chứa dữ liệu gốc (raw) và dữ liệu đã qua xử lý (processed).
+- `notebooks/`:
+    - `03_Part3_Data_Prep.ipynb`: Làm sạch và hợp nhất dữ liệu từ nhiều nguồn.
+    - `04_Part3_Feature_Eng.ipynb`: Tạo các biến trễ (Lags), cửa sổ trượt (Rolling) và tích hợp Web Traffic.
+    - `05_Part3_Modeling_SHAP.ipynb`: Huấn luyện mô hình Ensemble, dự báo đệ quy và giải thích bằng SHAP.
+- `report/`: Chứa mã nguồn LaTeX và file báo cáo PDF theo định dạng NeurIPS.
+- `submission/`: File `submission.csv` nộp trên Kaggle.
 
-- Scikit-learn  
-- XGBoost  
-- LightGBM  
+## 2. Phương pháp tiếp cận
+- **Mô hình:** Kết hợp **LightGBM** (tối ưu đặc trưng hành vi) và **Prophet** (tối ưu tính mùa vụ).
+- **Chiến lược:** Dự báo đệ quy (Recursive Forecasting) từng ngày để cập nhật các biến trễ cho tương lai.
+- **Giải thích:** Sử dụng **SHAP values** để phân tích mức độ ảnh hưởng của các chiến dịch Marketing và Web Traffic đến kết quả dự báo.
 
-Pipeline cần bao gồm:
+## 3. Hướng dẫn chạy lại kết quả (Reproducibility)
+Để tái lập kết quả dự báo, vui lòng thực hiện theo các bước sau:
 
-- Feature Engineering  
-- Cross-validation đúng theo chiều thời gian  
-- Các kỹ thuật xử lý rò rỉ dữ liệu (Data Leakage Prevention)  
-
----
-
-## Nhiệm vụ
-
-Dự báo cột **Revenue** cho giai đoạn:
-
-**01/01/2023 – 01/07/2024**
-
----
-
-## Yêu cầu kỹ thuật
-
-### 1. Xây dựng Pipeline
-
-Pipeline phải đảm bảo:
-
-- Có bước feature engineering rõ ràng  
-- Cross-validation đúng theo thứ tự thời gian (Time Series Split)  
-- Tuyệt đối không để rò rỉ dữ liệu từ tập test sang train  
-
-### 2. Giải thích mô hình
-
-Sử dụng ít nhất một trong các phương pháp sau:
-
-- SHAP Values  
-- Feature Importance  
-- Partial Dependence Plots  
-
-Mục tiêu:
-
-- Giải thích các yếu tố ảnh hưởng đến doanh thu  
-- Trình bày bằng ngôn ngữ kinh doanh dễ hiểu  
-
----
-
-## Nộp bài
-
-- Tạo file **submission.csv**  
-- Upload lên hệ thống Kaggle theo đúng thứ tự dòng quy định  
-
-### Link Dataset
-
-https://www.kaggle.com/competitions/datathon-2026-round-1/overview
-
-### Link Nộp Bài
-
-https://www.kaggle.com/competitions/datathon-2026-round-1
-
----
-
-## Ràng buộc
-
-### Không sử dụng dữ liệu ngoài
-
-- Chỉ được phép dùng dữ liệu do cuộc thi cung cấp  
-
-### Tính tái lập
-
-- Đính kèm toàn bộ mã nguồn  
-- Đặt random seed cố định  
-
-### Khả năng giải thích
-
-Trong report cần có một mục riêng *** SỬ DỤNG LATEX *** để giải thích:
-
-- Những yếu tố dẫn động doanh thu chính do mô hình xác định  
-- Có thể dùng:
-  - Feature Importance  
-  - SHAP Values  
-  - Partial Dependence Plot  
-
-Giải thích mô hình học được gì bằng ngôn ngữ kinh doanh.
-
----
-
-## Chỉ số đánh giá
-
-Mô hình càng tốt khi:
-
-- **MAE** càng thấp càng tốt  
-- **RMSE** càng thấp càng tốt  
-- **R²** càng cao càng tốt (lý tưởng gần **1**)
-
-***LƯU Ý: CẦN CHỨA MÃ NGUỒN, NOTEBOOK VÀ SUBMISSION***
+### Bước 1: Cài đặt môi trường
+Cài đặt các thư viện cần thiết thông qua pip:
+```bash
+pip install -r requirements.txt
