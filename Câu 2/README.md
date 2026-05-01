@@ -1,79 +1,28 @@
-# YÊU CẦU 1: FILE TIỀN XỬ LÝ DỮ LIỆU
+# Câu 2 - Data Preprocessing & EDA
 
-Cần **1 file đầu tiên** để thực hiện tiền xử lý dữ liệu, bao gồm:
+Mục tiêu của phần này là chuẩn bị dữ liệu đầu vào sạch, nhất quán và đủ cấu trúc để phục vụ cho các bước phân tích, trực quan hóa và modeling ở các phần sau.
 
-- Kiểm tra số dòng, số cột, kiểu dữ liệu của từng file.  
-- Xử lý **missing values**.  
-- Xử lý **duplicate records**.  
-- Sửa lỗi **format ngày tháng**.  
-- Chuyển đổi **sai kiểu dữ liệu số** về đúng định dạng.  
+## Tôi đang làm gì trong Câu 2
 
----
+1. Kiểm tra và làm sạch dữ liệu gốc trong thư mục `data/`.
+2. Chuẩn hóa kiểu dữ liệu, định dạng ngày tháng, giá trị thiếu và dữ liệu trùng lặp.
+3. Ghép các bảng liên quan để tạo bộ dữ liệu phân tích chung.
+4. Thực hiện EDA để tìm insight quan trọng về doanh thu, đơn hàng, khách hàng và vận hành.
+5. Lưu dữ liệu đã xử lý vào `cleaned_data/` để các notebook khác có thể dùng lại ngay.
 
-# YÊU CẦU 2: FILE THỰC HIỆN EDA
+## Các file chính
 
-Cần **1 file riêng** để thực hiện **Exploratory Data Analysis (EDA)**:
+- `preprocessing.ipynb`: làm sạch, chuẩn hóa và xuất dữ liệu đã xử lý.
+- `EDA.ipynb`: phân tích khám phá dữ liệu, tạo feature và rút ra insight.
+- `data/`: dữ liệu gốc ban đầu.
+- `cleaned_data/`: dữ liệu sau tiền xử lý.
 
-- Merge các bảng quan trọng thành dataset dùng chung:  
-  - `orders`  
-  - `order_items`  
-  - `products`  
-  - `customers`  
-  - `payments`  
-  - `returns`  
-  - `shipments`  
+## Phạm vi xử lý
 
-- Tạo các feature hỗ trợ phân tích:
-  - Doanh thu  
-  - Lợi nhuận gộp  
-  - Return rate  
-  - Delivery time  
-  - Customer lifetime value  
-  - Monthly sales  
+Trong phần này, tôi tập trung vào các bảng dữ liệu liên quan đến khách hàng, đơn hàng, sản phẩm, thanh toán, trả hàng, vận chuyển và các bảng nghiệp vụ khác để xây dựng một dataset thống nhất cho phân tích.
 
-- Lưu dữ liệu sạch thành file trung gian để nhóm **Visualization / Modeling** có thể sử dụng ngay.  
+## Kết quả mong đợi
 
-- Code rõ ràng, reproducible, có notebook/script riêng.  
-
-- Join và merge nhiều bảng để tìm ra insights quan trọng thay vì chỉ phân tích từng bảng riêng lẻ.  
-
----
-
-# YÊU CẦU 3: FILE THỰC HIỆN VISUALIZATION
-
-Cần **1 file riêng** để trực quan hóa dữ liệu:
-
-- Thiết kế và xây dựng:
-  - Biểu đồ  
-  - Đồ thị  
-  - Bản đồ  
-  - Dashboard  
-
-- Mục tiêu:
-  - Thể hiện patterns trong dữ liệu  
-  - Tìm xu hướng (trends)  
-  - Khám phá mối quan hệ ẩn sâu trong bộ dữ liệu mô phỏng doanh nghiệp thời trang  
-
----
-
-# YÊU CẦU 4: FILE LATEX GIẢI THÍCH PHẦN VISUALIZATION
-
-Sử dụng **1 file LaTeX** để giải thích từng phần trực quan hóa của **Yêu cầu 3**.
-
-## Với mỗi biểu đồ cần có:
-
-### 1. Mô tả
-
-- Nêu rõ biểu đồ thể hiện gì.  
-- Giải thích vì sao góc nhìn này quan trọng đối với doanh nghiệp.  
-
-### 2. Phát hiện chính (Key Findings)
-
-- Chỉ ra xu hướng nổi bật.  
-- Phát hiện điểm bất thường.  
-- Nêu các mối quan hệ được hỗ trợ bằng số liệu cụ thể.  
-
-### 3. Đề xuất hành động (Actionable Recommendations)
-
-- Giải thích ý nghĩa kinh doanh.  
-- Đưa ra hành động cụ thể doanh nghiệp nên thực hiện.  
+- Dữ liệu sạch, nhất quán và có thể tái sử dụng.
+- Một bộ feature hữu ích cho phân tích và modeling.
+- Các insight ban đầu về hành vi khách hàng, hiệu quả bán hàng và hiệu suất vận hành.
